@@ -1,0 +1,30 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "My portaolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelangeldgonzalez/miguelangeldgonzalez.github.io.git"
+  },
+  "keywords": [
+    "react",
+    "javascript"
+  ],
+  "author": "Miguelangel <miguelangel.dgonzalez@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miguelangeldgonzalez/miguelangeldgonzalez.github.io/issues"
+  },
+  "homepage": "https://github.com/miguelangeldgonzalez/miguelangeldgonzalez.github.io#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
