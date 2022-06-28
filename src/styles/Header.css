@@ -1,0 +1,22 @@
+.header {
+     background-color: var(--box);
+     width: 100%;
+     height: 70px;
+     display: flex;
+     justify-content: space-between;
+}
+.header__nav, .header__main-icon {
+    align-self: center;
+    margin: 0 60px;
+}
+.header__main-icon {
+    color: var(--neon);
+    font-size: 2rem;
+    font-family: "Decalled Script";
+}
+header .header__nav-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 30px;
+}

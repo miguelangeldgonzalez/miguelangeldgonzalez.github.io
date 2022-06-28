@@ -1,0 +1,18 @@
+.simple-card {
+    background-color: var(--accent);
+    width: 300px;
+    height: auto;
+    justify-content: center;
+    padding: 10px 30px;
+}
+.simple-card a {
+    display: flex;
+    flex-direction: column;
+}
+.simple-card h3 {
+    text-align: center;
+}
+.simple-card img {
+    width: 100px;
+    margin: 0 auto;
+}

@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -9,7 +10,10 @@ module.exports = {
     },
     mode: 'development',
     resolve: {
-        extensions: ['.js', '.jsx'] 
+        extensions: ['.js', '.jsx'],
+        alias: {
+            '@icons': path.resolve(__dirname, 'src/assets/icons')
+        }
     },
     module: {
         rules: [
@@ -25,6 +29,18 @@ module.exports = {
                 use: {
                     loader: 'html-loader'
                 }
+            },
+            {
+                test: /\.(css|scss)$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            },
+            {
+                test: /\.png/,
+                type: "asset/resource"
             }
         ]
     },
@@ -32,6 +48,22 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html',
             filename: './index.html'
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src', 'assets/'),
+                    to: 'src/assets'
+                }
+            ]
         })
-    ]
+    ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist')
+        },
+        compress: true,
+        port: 3005,
+        historyApiFallback: true
+    }
 }

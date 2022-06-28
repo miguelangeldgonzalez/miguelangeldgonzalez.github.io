@@ -1,0 +1,11 @@
+.projects {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.project-section__cards-container {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+}

@@ -1,0 +1,75 @@
+:root{
+    --background: #0A192F;
+    --box: #172A46;
+    --neon: #009C98;
+    --shadow: #0A1628;
+    --accent: #111F33;
+    --text: #fff;
+    --light-neon: 
+        0 0 1px #fff,
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 8px var(--neon),
+        0 0 16px var(--neon),
+        0 0 32px var(--neon),
+        0 0 64px var(--neon),
+        0 0 128px var(--neon);
+    }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Decalled Script";
+    src: url('../assets/fonts/decalled script.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../assets/fonts/roboto/Roboto-Light.ttf');
+        font-weight: lighter;
+    }
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../assets/fonts/roboto/Roboto-Medium.ttf');
+        font-weight: normal;  
+    }
+}
+@keyframes flicker {
+    0% {opacity: 0;}
+    2% {opacity: 1;}
+    4% {opacity: 0;}
+    6% {opacity: 1;}
+}
+html {
+    font-size: 20px;
+    color: var(--text);
+    font-family: 'Roboto';
+    font-weight: lighter;
+}
+h2, h3 {
+    font-weight: normal;
+}
+a{
+    color: var(--text);
+    text-decoration: none;
+}
+.title {
+    color: var(--neon);
+    margin: 40px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: var(--light-neon);
+}
+.title span{
+    animation: flicker 5s infinite;
+}
+.title .title__delay1{
+    animation-delay: 0.8s;
+}
+.title .title__delay2{
+    animation-delay: 1.4s;
+}

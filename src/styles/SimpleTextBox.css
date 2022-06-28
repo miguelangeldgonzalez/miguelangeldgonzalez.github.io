@@ -1,0 +1,15 @@
+.simple-text-container {
+    width: 80%;
+    height: auto;
+    background-color: var(--box);
+    box-shadow: 5px 5px var(--shadow);
+    margin: 40px auto;
+    text-align: left;
+    padding: 10px 30px;
+}
+.simple-text-container h2, .simple-text-container h3, .simple-text-container p{
+    margin: 30px 0;
+}
+.simple-text-container h3 {
+    font-size: 1.25rem;
+}
