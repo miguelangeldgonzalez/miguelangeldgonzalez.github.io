@@ -1,18 +1,35 @@
 .simple-card {
-    background-color: var(--accent);
-    width: 300px;
+    width: 190px;
     height: auto;
     justify-content: center;
-    padding: 10px 30px;
+    border-bottom: 1px solid var(--neon);
+    transition: .5s;
+    margin: 20px;
 }
 .simple-card a {
-    display: flex;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 100px 10% 150px;
     flex-direction: column;
+    transition: .5s;
 }
-.simple-card h3 {
+.simple-card h3, .simple-card h4 {
     text-align: center;
+    padding: 10px 0;
 }
 .simple-card img {
-    width: 100px;
+    width: 80px;
     margin: 0 auto;
+}
+.simple-card:hover{
+    transform: scale(1.2);
+    background-color: var(--background);
+    box-shadow: 0px 0px 10px 10px var(--neon);
+}
+div.simple-card.mini{
+    width: 100px;
+}
+div.simple-card.mini a {
+    grid-template-rows: 80px auto;
 }

@@ -4,7 +4,8 @@ import '../styles/SimpleTextBox.css';
 
 const SimpleTextBox = ({children}) => {
     return (
-        <div className="simple-text-container">
+        <div className="simple-text-container animated-border">
+            <i></i>
             {children}
         </div>
     )
