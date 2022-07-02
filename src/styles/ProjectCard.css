@@ -1,5 +1,5 @@
 .project-card, .project-card a{
-    height: 290px;
+    height: 220px;
 }
 .project-card {
     background-color: var(--box);
@@ -16,7 +16,7 @@
     align-self: center;
 }
 .project-card h3, .project-card p{
-    margin: 20px 15px;
+    margin: 10px 15px;
 }
 .project-card p, .project-card__languages {
     align-self: end;

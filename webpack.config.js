@@ -6,13 +6,18 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: '/'
     },
     mode: 'development',
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
-            '@icons': path.resolve(__dirname, 'src/assets/icons')
+            '@projects-images': path.resolve(__dirname, 'src/assets/img/projects'),
+            '@components': path.resolve(__dirname, 'src/components'),
+            '@containers': path.resolve(__dirname, 'src/containers'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons'),
+            '@styles': path.resolve(__dirname, 'src/styles')
         }
     },
     module: {

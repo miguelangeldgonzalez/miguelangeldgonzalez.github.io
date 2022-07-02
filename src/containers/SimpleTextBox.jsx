@@ -1,12 +1,11 @@
 import React from 'react';
 
-import '../styles/SimpleTextBox.css';
+import '@styles/SimpleTextBox.css';
 
-const SimpleTextBox = ({children}) => {
+const SimpleTextBox = (props) => {
     return (
-        <div className="simple-text-container animated-border">
-            <i></i>
-            {children}
+        <div className='simple-textbox'>
+            {props.children}
         </div>
     )
 }
