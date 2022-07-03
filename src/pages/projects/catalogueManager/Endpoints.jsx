@@ -1,4 +1,6 @@
 import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { solarizedDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const Endpoints = () => {
     /*
@@ -6,14 +8,20 @@ const Endpoints = () => {
         Products ~ 325
 
     */
+
+   const highlightStyle = {
+    width: '80%',
+    marginLeft: '60px'
+   }
+
     return (
-        <div>
+        <React.Fragment>
             {/*--------------------- USERS ----------------------*/}
             <React.Fragment>
             <h2>Endpoints</h2>
 
-            <h3>Users</h3>
-            <h4><span>POST</span> - Create User</h4>
+            <h3 className='title'>Users</h3>
+            <h4><span className='post'>POST</span> - Create User</h4>
 
             <h5>Authorization</h5>
             <p>No needs authorization.</p>
@@ -45,18 +53,19 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an object with these attributes:</p>
-            <code>
-                {`
-                {
-                    "id": "379723b8-f12a-475f-b58c-a8792764e97c",
-                    "role": "customer",
-                    "createdAt": "2022-06-17T17:20:55.768Z",
-                    "email": "raul@gmail.com",
-                    "name": "Raul",
-                    "lastName": "Joaquin"
-                }
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "379723b8-f12a-475f-b58c-a8792764e97c",
+    "role": "customer",
+    "createdAt": "2022-06-17T17:20:55.768Z",
+    "email": "raul@gmail.com",
+    "name": "Raul",
+    "lastName": "Joaquin"
+}
+
+`}
+            </SyntaxHighlighter>
             <p>201 - Created</p>
 
             <h5>Errors</h5>
@@ -71,7 +80,7 @@ const Endpoints = () => {
                 </tr>
             </table>
             
-            <h4><span>GET</span> - Get All Users</h4>
+            <h4><span className='get'>GET</span> - Get All Users</h4>
 
             <h5>Authorization</h5>
             <p>Require admin authorization.</p>
@@ -94,19 +103,20 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an <b>array</b> of objects with these attributes:</p>
-            <code>
-                {`
-                {
-                    "id": "e28017d0-4224-47a7-bda4-6b2bacf7aa32",
-                    "email": "amelia@gmail.com",
-                    "name": "Amelia",
-                    "lastName": " Margarita",
-                    "role": "customer",
-                    "createdAt": "2022-06-07T23:25:34.991Z",
-                    "image": false
-                }                        
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "e28017d0-4224-47a7-bda4-6b2bacf7aa32",
+    "email": "amelia@gmail.com",
+    "name": "Amelia",
+    "lastName": " Margarita",
+    "role": "customer",
+    "createdAt": "2022-06-07T23:25:34.991Z",
+    "image": false
+}
+
+`}
+            </SyntaxHighlighter>
 
             <h5>Errors</h5>
             <table>
@@ -124,7 +134,7 @@ const Endpoints = () => {
                 </tr>
             </table>
 
-            <h4><span>PATCH</span> - Edit Users</h4>
+            <h4><span className='patch'>PATCH</span> - Edit Users</h4>
 
             <h5>Authorization</h5>
             <p>Will edit the logged user. If an admin user is logged, will edit the user of the specified ID.</p>
@@ -162,18 +172,19 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an object with these attributes:</p>
-            <code>
-                {`
-                {
-                    "id": "e28017d0-4224-47a7-bda4-6b2bacf7aa32",
-                    "email": "amelia@gmail.com",
-                    "name": "Luisa",
-                    "lastName": "Margarita",
-                    "role": "customer",
-                    "createdAt": "2022-06-07T23:25:34.991Z"
-                }                                          
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "e28017d0-4224-47a7-bda4-6b2bacf7aa32",
+    "email": "amelia@gmail.com",
+    "name": "Luisa",
+    "lastName": "Margarita",
+    "role": "customer",
+    "createdAt": "2022-06-07T23:25:34.991Z"
+} 
+
+`}
+            </SyntaxHighlighter>
             <p>Is the same user but with the modifications.</p>
 
             <h5>Errors</h5>
@@ -192,7 +203,7 @@ const Endpoints = () => {
                 </tr>
             </table>
 
-            <h4><span>DELETE</span> - Delete Users</h4>
+            <h4><span className='delete'>DELETE</span> - Delete Users</h4>
 
             <h5>Authorization</h5>
             <p>Will delete the logged user. If an admin user is logged, will delete the user of the specified ID.</p>
@@ -214,13 +225,14 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an object with these attributes:</p>
-            <code>
-                {`
-                {
-                   "mesage": "User deleted"
-                }                                          
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "mesage": "User deleted"
+}
+
+`}
+            </SyntaxHighlighter>
             <p>Is the same user but with the modifications.</p>
 
             <h5>Errors</h5>
@@ -239,7 +251,7 @@ const Endpoints = () => {
                 </tr>
             </table>
                 
-            <h4><span>POST</span> - /upload_profile_image</h4>
+            <h4><span className='post'>POST</span> - /upload_profile_image</h4>
 
             <h5>Authorization</h5>
             <p>Will load the profile image of the logged user.</p>
@@ -249,13 +261,15 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an array of objects with these attributes:</p>
-            <code>
-                {`
-                {
-                    "image": "https://api.backend.com/profile_photos/e28017d0-4224-47a7-bda4-6b2bacf7aa32.png",
-                    "message": "Image loaded correctly"
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "image": "https://api.backend.com/profile_photos/e28017d0-4224-47a7-bda4-6b2bacf7aa32.png",
+    "message": "Image loaded correctly"
+}
+
+`}
+            </SyntaxHighlighter>
             <p>201 - Created</p>
             <p>All the profile images will converted to PNG format and stored on the folder profile_photos using the id of the user as name.</p>
 
@@ -275,7 +289,7 @@ const Endpoints = () => {
                 </tr>
             </table>
 
-            <h4><span>DELETE</span> - /delete_profile_image</h4>
+            <h4><span className='delete'>DELETE</span> - /delete_profile_image</h4>
 
             <h5>Authorization</h5>
             <p>Will edit the logged user. If an admin user is logged, will delete the user’s profile image of the specified ID.</p>
@@ -298,13 +312,14 @@ const Endpoints = () => {
             
             <h5>Returned</h5>
             <p>The endpoint will return an object with these attributes:</p>
-            <code>
-                {`
-                {
-                    "message": "Deleted"
-                }                                          
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "message": "Deleted"
+} 
+
+`}
+            </SyntaxHighlighter>
 
             <h5>Errors</h5>
             <table>
@@ -325,7 +340,7 @@ const Endpoints = () => {
             
             {/*--------------------- PRODUCTS ----------------------*/}
             <React.Fragment>
-            <h3>Products</h3>
+            <h3 className='title'>Products</h3>
 
             <h4><span className='post'>POST</span> - Create Product</h4>
 
@@ -359,18 +374,19 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an object with these attributes:</p>
-            <code>
-                {`
-                {
-                    "id": "889467e2-86f1-4971-a0d7-3d2632361c9f",
-                    "createdAt": "2022-06-20T01:58:58.331Z",
-                    "price": 87,
-                    "name": "Agua de cambur",
-                    "description": "Agua de cambur saturada de musica",
-                    "stock": 5
-                }                
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "889467e2-86f1-4971-a0d7-3d2632361c9f",
+    "createdAt": "2022-06-20T01:58:58.331Z",
+    "price": 87,
+    "name": "Agua de cambur",
+    "description": "Agua de cambur saturada de musica",
+    "stock": 5
+}
+
+`}
+            </SyntaxHighlighter>
             <p>201 - Created</p>
 
             <h5>Errors</h5>
@@ -424,19 +440,20 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an array of objects with these attributes:</p>
-            <code>
-                {`
-               {
-                    "id": "24a714ac-9ef7-4492-931b-a3811fc98182",
-                    "price": 3,
-                    "name": "Pescado frito",
-                    "description": "Pescado frito con aceite de ballena blanca que sabia cantar opera griega",
-                    "stock": 26,
-                    "createdAt": "2022-06-08T23:05:48.359Z",
-                    "images": []
-                }                               
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "24a714ac-9ef7-4492-931b-a3811fc98182",
+    "price": 3,
+    "name": "Pescado frito",
+    "description": "Pescado frito con aceite de ballena blanca que sabia cantar opera griega",
+    "stock": 26,
+    "createdAt": "2022-06-08T23:05:48.359Z",
+    "images": []
+}
+
+`}
+            </SyntaxHighlighter>
             <p>The attribute “image”, will return an array with the URLs of the images of the product.</p>
 
             <h5>Errors</h5>
@@ -471,13 +488,14 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an array of objects with these attributes:</p>
-            <code>
-                {`
-               {
-                    "message: "Product deleted"
-                }                               
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "message: "Product deleted"
+} 
+
+`}
+            </SyntaxHighlighter>
 
             <h5>Errors</h5>
             <table>
@@ -495,7 +513,7 @@ const Endpoints = () => {
                 </tr>
             </table>
 
-            <h4><span className='post'>PATCH</span> - Edit User</h4>
+            <h4><span className='patch'>PATCH</span> - Edit Product</h4>
 
             <h5>Authorization</h5>
             <p>Only an admin can edit a product.</p>
@@ -532,18 +550,19 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an object with these attributes:</p>
-            <code>
-                {`
-                {
-                    "id": "889467e2-86f1-4971-a0d7-3d2632361c9f",
-                    "createdAt": "2022-06-20T01:58:58.331Z",
-                    "price": 87,
-                    "name": "Agua de cambur",
-                    "description": "Agua de cambur saturada de musica",
-                    "stock": 5
-                }                
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "889467e2-86f1-4971-a0d7-3d2632361c9f",
+    "createdAt": "2022-06-20T01:58:58.331Z",
+    "price": 87,
+    "name": "Agua de cambur",
+    "description": "Agua de cambur saturada de musica",
+    "stock": 5
+} 
+
+`}
+            </SyntaxHighlighter>
             <p>201 - Created</p>
 
             <h5>Errors</h5>
@@ -587,14 +606,15 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an array of strings, with the URLs of the uploaded images.</p>
-            <code>
-                {`
-                [
-                    "backend.com/products/889467e2-86f1-4971-a0d7-3d2632361c9f/Agua_de_cambur_119.png",
-                    "backend.com/products/889467e2-86f1-4971-a0d7-3d2632361c9f/Agua_de_cambur_118.png"
-                ]                                
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+[
+    "backend.com/products/889467e2-86f1-4971-a0d7-3d2632361c9f/Agua_de_cambur_119.png",
+    "backend.com/products/889467e2-86f1-4971-a0d7-3d2632361c9f/Agua_de_cambur_118.png"
+]
+
+`}
+            </SyntaxHighlighter>
             <p>The products images are in the folder products, in the folder products there is a folder with the id of the products that has images uploaded.</p>
 
             <p>The max of images per product by default is 10, but the backend administrator can change it. The upload image works like that:</p>
@@ -655,13 +675,14 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an array of strings, with the URLs of the uploaded images.</p>
-            <code>
-                {`
-                {
-                    "message": "Images product deleted successfully",
-                }
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "message": "Images product deleted successfully",
+}
+
+`}
+            </SyntaxHighlighter>
 
             <h5>Errors</h5>
             <table>
@@ -682,9 +703,9 @@ const Endpoints = () => {
 
             {/*------------------- PURCHASE ORDER --------------------*/}
             <React.Fragment>
-            <h3>Purchase Order</h3>
+            <h3 className='title'>Purchase Order</h3>
 
-            <h4><span>GET</span> - Get All Orders</h4>
+            <h4><span className='get'>GET</span> - Get All Orders</h4>
 
             <h5>Authorization</h5>
             <p>A customer can only search for their orders. An admin can see all orders.</p>
@@ -743,50 +764,51 @@ const Endpoints = () => {
 
             <h5>Returned</h5>
             <p>The endpoint will return an object with principally two attributes, “count” indicates the number of orders and “orders” that is an array of the orders.</p>
-            <code>
-                {`
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "orders": [
+        {
+            "id": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
+            "direction": "Narnia, Calle 34 Case 22",
+            "orderedAt": "2022-06-08T23:02:09.527Z",
+            "finishedAt": "2022-06-08T23:04:20.108Z",
+            "orderItems": [
                 {
-                    "orders": [
-                        {
-                            "id": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
-                            "direction": "Narnia, Calle 34 Case 22",
-                            "orderedAt": "2022-06-08T23:02:09.527Z",
-                            "finishedAt": "2022-06-08T23:04:20.108Z",
-                            "orderItems": [
-                                {
-                                    "price": 3,
-                                    "quantity": 5,
-                                    "product": {
-                                        "id": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
-                                        "price": 3,
-                                        "name": "Cochino",
-                                        "description": "Lonjas de cochino horneada con alas de Dodo"
-                                    }
-                                },
-                                {
-                                    "price": 5,
-                                    "quantity": 8,
-                                    "product": {
-                                        "id": "3d2fbe5c-124b-4d1f-af13-86c8b8264b80",
-                                        "price": 50,
-                                        "name": "Patas de conejo",
-                                        "description": "Par de patas de conejo usadas por un chaman de zimbabue",
-                                        "stock": 40,
-                                        "createdAt": "2022-06-08T00:25:49.839Z"
-                                    }
-                                }
-                            ],
-                            "buyer": {
-                                "id": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
-                                "name": "Saul",
-                                "lastName": "Tijeras"
-                            }
-                        }
-                    ],
-                    "count": 3
-                }                
-                `}
-            </code>
+                    "price": 3,
+                    "quantity": 5,
+                    "product": {
+                        "id": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
+                        "price": 3,
+                        "name": "Cochino",
+                        "description": "Lonjas de cochino horneada con alas de Dodo"
+                    }
+                },
+                {
+                    "price": 5,
+                    "quantity": 8,
+                    "product": {
+                        "id": "3d2fbe5c-124b-4d1f-af13-86c8b8264b80",
+                        "price": 50,
+                        "name": "Patas de conejo",
+                        "description": "Par de patas de conejo usadas por un chaman de zimbabue",
+                        "stock": 40,
+                        "createdAt": "2022-06-08T00:25:49.839Z"
+                    }
+                }
+            ],
+            "buyer": {
+                "id": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
+                "name": "Saul",
+                "lastName": "Tijeras"
+            }
+        }
+    ],
+    "count": 3
+} 
+
+`}
+            </SyntaxHighlighter>
             <h5>Errors</h5>
             <table>
                 <tr>
@@ -841,42 +863,45 @@ const Endpoints = () => {
                 </tr>
             </table>
 
-            <code>
-                {`
-                {
-                    "direction": "Lima, Costa Brava",
-                    "buyerId": "2135a6a9-36fd-487e-a637-50a989700ab0",
-                    "orderItems": [
-                        {
-                            "quantity": 1,
-                            "productId": "3e1587bf-090a-426e-82f0-96691ccade3d"
-                        }
-                    ]
-                }                
-                `}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "direction": "Lima, Costa Brava",
+    "buyerId": "2135a6a9-36fd-487e-a637-50a989700ab0",
+    "orderItems": [
+        {
+            "quantity": 1,
+            "productId": "3e1587bf-090a-426e-82f0-96691ccade3d"
+        }
+    ]
+} 
+
+`}
+            </SyntaxHighlighter>
 
             <p>When an order is created the stock of the product ordered will decrease by the quantity ordered.</p>
 
             <h5>Returned</h5>
             <p>The endpoint will return an object with these attributes:</p>
-            <code>
-                {`{
-                    "id": "b5ac518b-6387-4aaa-ad61-05f6bb5a6bd0",
-                    "orderedAt": "2022-06-20T03:35:47.206Z",
-                    "finishedAt": null,
-                    "direction": "Venezuela, Aguas Calientes",
-                    "orderItems": [
-                        {
-                            "id": 15,
-                            "quantity": 1,
-                            "productId": "24a714ac-9ef7-4492-931b-a3811fc98182",
-                            "purchaseOrderId": "b5ac518b-6387-4aaa-ad61-05f6bb5a6bd0"
-                        }
-                    ],
-                    "buyerId": "7dd1277f-a138-4071-932e-563fd290b7d5"
-                }`}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "b5ac518b-6387-4aaa-ad61-05f6bb5a6bd0",
+    "orderedAt": "2022-06-20T03:35:47.206Z",
+    "finishedAt": null,
+    "direction": "Venezuela, Aguas Calientes",
+    "orderItems": [
+        {
+            "id": 15,
+            "quantity": 1,
+            "productId": "24a714ac-9ef7-4492-931b-a3811fc98182",
+            "purchaseOrderId": "b5ac518b-6387-4aaa-ad61-05f6bb5a6bd0"
+        }
+    ],
+    "buyerId": "7dd1277f-a138-4071-932e-563fd290b7d5"
+}`
+}
+            </SyntaxHighlighter>
 
             <h5>Errors</h5>
             <table>
@@ -894,7 +919,7 @@ const Endpoints = () => {
                 </tr>
             </table>
             
-            <h4><span>DELETE</span> - Delete Order</h4>
+            <h4><span className='delete'>DELETE</span> - Delete Order</h4>
 
             <h5>Authorization</h5>
             <p>Only an admin user can delete orders.</p>
@@ -916,11 +941,11 @@ const Endpoints = () => {
             <p><b>NOTE:</b> You can’t delete a finished order; only unfinished orders can be deleted. To delete a finished order, you have to delete all their sales and the order will be deleted automatically.</p>
 
             <h5>Returned</h5>
-            <code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
                 {`{
                     "message": "Order deleted",
                 }`}
-            </code>
+            </SyntaxHighlighter>
             <h5>Errors</h5>
             <table>
                 <tr>
@@ -937,7 +962,7 @@ const Endpoints = () => {
                 </tr>
             </table>
 
-            <h4><span>PATCH</span> - Update Order</h4>
+            <h4><span className='patch'>PATCH</span> - Update Order</h4>
 
             <h5>Authorization</h5>
             <p>Only an admin can update orders.</p>
@@ -960,43 +985,45 @@ const Endpoints = () => {
             </table>
 
             <h5>Returned</h5>
-            <code>
-                {`{
-                    "id": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
-                    "direction": "Guanajuato",
-                    "orderedAt": "2022-06-08T23:02:09.527Z",
-                    "finishedAt": "2022-06-08T23:04:20.108Z",
-                    "orderItems": [
-                        {
-                            "price": 3,
-                            "quantity": 5,
-                            "product": {
-                                "id": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
-                                "price": 3,
-                                "name": "Cochino",
-                                "description": "Lonjas de cochino horneada con alas de Dodo"
-                            }
-                        },
-                        {
-                            "price": 5,
-                            "quantity": 8,
-                            "product": {
-                                "id": "3d2fbe5c-124b-4d1f-af13-86c8b8264b80",
-                                "price": 50,
-                                "name": "Patas de conejo",
-                                "description": "Par de patas de conejo usadas por un chaman de zimbabue",
-                                "stock": 40,
-                                "createdAt": "2022-06-08T00:25:49.839Z"
-                            }
-                        }
-                    ],
-                    "buyer": {
-                        "id": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
-                        "name": "Saul",
-                        "lastName": "Tijeras"
-                    }
-                }`}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
+    "direction": "Guanajuato",
+    "orderedAt": "2022-06-08T23:02:09.527Z",
+    "finishedAt": "2022-06-08T23:04:20.108Z",
+    "orderItems": [
+        {
+            "price": 3,
+            "quantity": 5,
+            "product": {
+                "id": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
+                "price": 3,
+                "name": "Cochino",
+                "description": "Lonjas de cochino horneada con alas de Dodo"
+            }
+        },
+        {
+            "price": 5,
+            "quantity": 8,
+            "product": {
+                "id": "3d2fbe5c-124b-4d1f-af13-86c8b8264b80",
+                "price": 50,
+                "name": "Patas de conejo",
+                "description": "Par de patas de conejo usadas por un chaman de zimbabue",
+                "stock": 40,
+                "createdAt": "2022-06-08T00:25:49.839Z"
+            }
+        }
+    ],
+    "buyer": {
+        "id": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
+        "name": "Saul",
+        "lastName": "Tijeras"
+    }
+}
+`}
+            </SyntaxHighlighter>
             <p>Will return the order with the chages.</p>
 
             <h4><span className='patch'>PATCH</span> - /set_as_finished</h4>
@@ -1017,33 +1044,35 @@ const Endpoints = () => {
             </table>
 
             <h5>Returned</h5>
-            <code>
-                {`{
-                    "id": "ca4a6622-aec6-4dab-b944-33f52fda4900",
-                    "direction": "Turkia",
-                    "orderedAt": "2022-06-14T14:52:10.422Z",
-                    "finishedAt": "2022-06-20T03:51:44.262Z",
-                    "orderItems": [
-                        {
-                            "id": 12,
-                            "quantity": 1,
-                            "product": {
-                                "id": "3d2fbe5c-124b-4d1f-af13-86c8b8264b80",
-                                "price": 50,
-                                "name": "Patas de conejo",
-                                "description": "Par de patas de conejo usadas por un chaman de zimbabue",
-                                "stock": 40,
-                                "createdAt": "2022-06-08T00:25:49.839Z"
-                            }
-                        }
-                    ],
-                    "buyer": {
-                        "id": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
-                        "name": "Saul",
-                        "lastName": "Tijeras"
-                    }
-                }`}
-            </code>
+            <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "ca4a6622-aec6-4dab-b944-33f52fda4900",
+    "direction": "Turkia",
+    "orderedAt": "2022-06-14T14:52:10.422Z",
+    "finishedAt": "2022-06-20T03:51:44.262Z",
+    "orderItems": [
+        {
+            "id": 12,
+            "quantity": 1,
+            "product": {
+                "id": "3d2fbe5c-124b-4d1f-af13-86c8b8264b80",
+                "price": 50,
+                "name": "Patas de conejo",
+                "description": "Par de patas de conejo usadas por un chaman de zimbabue",
+                "stock": 40,
+                "createdAt": "2022-06-08T00:25:49.839Z"
+            }
+        }
+    ],
+    "buyer": {
+        "id": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
+        "name": "Saul",
+        "lastName": "Tijeras"
+    }
+}
+`}
+            </SyntaxHighlighter>
 
             <h5>Errors</h5>
             <table>
@@ -1064,7 +1093,7 @@ const Endpoints = () => {
 
             {/*----------------------- SALES -------------------------*/}
             <React.Fragment>
-                <h3>Sales</h3>
+                <h3 className='title'>Sales</h3>
                 <p>All these endpoints need admin authorization.</p>
 
                 <h4><span className='get'>GET</span> - Get All Sales</h4>
@@ -1111,25 +1140,28 @@ const Endpoints = () => {
 
                 <h5>Returned</h5>
                 <p>The endpoint will return an array with these attributes:</p>
-                <code>{`{
-                        "id": "5c4aee8c-45a6-4d28-80b2-04675831b899",
-                        "price": 3,
-                        "quantity": 5,
-                        "purchaseOrder": {
-                            "id": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
-                            "direction": "Guanajuato",
-                            "buyerId": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
-                            "orderedAt": "2022-06-08T23:02:09.527Z",
-                            "finishedAt": "2022-06-08T23:04:20.108Z"
-                        },
-                        "product": {
-                            "id": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
-                            "price": 3,
-                            "name": "Cochino",
-                            "description": "Lonjas de cochino horneada con alas de Dodo"
-                        }
-                    }
-                `}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "5c4aee8c-45a6-4d28-80b2-04675831b899",
+    "price": 3,
+    "quantity": 5,
+    "purchaseOrder": {
+        "id": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
+        "direction": "Guanajuato",
+        "buyerId": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
+        "orderedAt": "2022-06-08T23:02:09.527Z",
+        "finishedAt": "2022-06-08T23:04:20.108Z"
+    },
+    "product": {
+        "id": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
+        "price": 3,
+        "name": "Cochino",
+        "description": "Lonjas de cochino horneada con alas de Dodo"
+    }
+}
+`}
+                </SyntaxHighlighter>
 
                 <h5>Errors</h5>
                 <table>
@@ -1168,15 +1200,18 @@ const Endpoints = () => {
                 </table>
 
                 <h5>Returned</h5>
-                <code>{`{
-                    "id": "020f2a2f-d27b-4773-8b7e-80a4fd9d905a",
-                    "price": 10,
-                    "productId": "3e1587bf-090a-426e-82f0-96691ccade3d",
-                    "purchaseOrderId": "ed270f7b-d942-4afc-a26e-3dde2accb567",
-                    "quantity": 15,
-                    "product_id": "3e1587bf-090a-426e-82f0-96691ccade3d"
-                }
-                `}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "020f2a2f-d27b-4773-8b7e-80a4fd9d905a",
+    "price": 10,
+    "productId": "3e1587bf-090a-426e-82f0-96691ccade3d",
+    "purchaseOrderId": "ed270f7b-d942-4afc-a26e-3dde2accb567",
+    "quantity": 15,
+    "product_id": "3e1587bf-090a-426e-82f0-96691ccade3d"
+}
+`}
+                </SyntaxHighlighter>
 
                 <h5>Errors</h5>
                 <table>
@@ -1209,9 +1244,13 @@ const Endpoints = () => {
                 </table>
 
                 <h5>Returned</h5>
-                <code>{`{
-                    "message": "Sell deleted",
-                }`}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "message": "Sell deleted",
+}
+`}
+                </SyntaxHighlighter>
 
                 <h5>Errors</h5>
                 <table>
@@ -1232,7 +1271,7 @@ const Endpoints = () => {
 
             {/*------------------- DELETED USERS --------------------*/}
             <React.Fragment>
-            <h3>Sales</h3>
+            <h3 className='title'>Sales</h3>
                 <p>All these endpoints need admin authorization.</p>
 
                 <h4><span className='get'>GET</span> - Get All Sales</h4>
@@ -1255,35 +1294,38 @@ const Endpoints = () => {
 
                 <h5>Returned</h5>
                 <p>The endpoint will erturn an array of objects with these attributes:</p>
-                <code>{`{
-                        "id": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
-                        "name": "Saul",
-                        "lastName": "Tijeras",
-                        "PurchaseOrders": [
-                            {
-                                "id": "ed270f7b-d942-4afc-a26e-3dde2accb567",
-                                "direction": "Guanajuato, Calle 34 Case 22",
-                                "buyerId": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
-                                "orderedAt": "2022-06-10T20:56:00.773Z",
-                                "finishedAt": "2022-06-11T02:51:43.114Z"
-                            },
-                            {
-                                "id": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
-                                "direction": "Guanajuato",
-                                "buyerId": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
-                                "orderedAt": "2022-06-08T23:02:09.527Z",
-                                "finishedAt": "2022-06-08T23:04:20.108Z"
-                            },
-                            {
-                                "id": "ca4a6622-aec6-4dab-b944-33f52fda4900",
-                                "direction": "Turkia",
-                                "buyerId": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
-                                "orderedAt": "2022-06-14T14:52:10.422Z",
-                                "finishedAt": "2022-06-20T03:51:44.262Z"
-                            }
-                        ]
-                    }
-                `}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "id": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
+    "name": "Saul",
+    "lastName": "Tijeras",
+    "PurchaseOrders": [
+        {
+            "id": "ed270f7b-d942-4afc-a26e-3dde2accb567",
+            "direction": "Guanajuato, Calle 34 Case 22",
+            "buyerId": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
+            "orderedAt": "2022-06-10T20:56:00.773Z",
+            "finishedAt": "2022-06-11T02:51:43.114Z"
+        },
+        {
+            "id": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
+            "direction": "Guanajuato",
+            "buyerId": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
+            "orderedAt": "2022-06-08T23:02:09.527Z",
+            "finishedAt": "2022-06-08T23:04:20.108Z"
+        },
+        {
+            "id": "ca4a6622-aec6-4dab-b944-33f52fda4900",
+            "direction": "Turkia",
+            "buyerId": "540e0f4a-13b6-4586-b9c3-5f03f6b77e33",
+            "orderedAt": "2022-06-14T14:52:10.422Z",
+            "finishedAt": "2022-06-20T03:51:44.262Z"
+        }
+    ]
+}
+`}
+                </SyntaxHighlighter>
                 <p>The attribute purchaseOrders is an array objects with the purchaseOrders that forbid that the user be deleted.</p>
 
                 <h5>Errors</h5>
@@ -1313,11 +1355,13 @@ const Endpoints = () => {
                 </table>
 
                 <h5>Returned</h5>
-                <code>{`
-                {
-                    "message": "User Deleted"
-                }
-                `}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "message": "User Deleted"
+}
+`}
+                </SyntaxHighlighter>
 
                 <h5>Errors</h5>
                 <table>
@@ -1338,7 +1382,7 @@ const Endpoints = () => {
 
             {/*----------------- DELETED PRODDUCTS --------------------*/}
             <React.Fragment>
-                <h3>Deleted Products</h3>
+                <h3 className='title'>Deleted Products</h3>
                 <p>All these endpoints need admin authorization.</p>
 
                 <h4><span className='get'>GET</span> - Get All Deleted Products</h4>
@@ -1370,22 +1414,26 @@ const Endpoints = () => {
                 <h5>Returnned</h5>
 
                 <p>The endpoint will return an array of objects with these attributes:</p>
-                <code>{`{
-                        "id": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
-                        "price": 3,
-                        "name": "Cochino",
-                        "description": "Lonjas de cochino horneada con alas de Dodo",
-                        "Sales": [
-                            {
-                                "id": "5c4aee8c-45a6-4d28-80b2-04675831b899",
-                                "price": 3,
-                                "productId": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
-                                "purchaseOrderId": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
-                                "quantity": 5,
-                                "product_id": "48b82aa0-a774-4d4c-ae42-af52483dee4b"
-                            }
-                        ]
-                }`}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+        "id": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
+        "price": 3,
+        "name": "Cochino",
+        "description": "Lonjas de cochino horneada con alas de Dodo",
+        "Sales": [
+            {
+                "id": "5c4aee8c-45a6-4d28-80b2-04675831b899",
+                "price": 3,
+                "productId": "48b82aa0-a774-4d4c-ae42-af52483dee4b",
+                "purchaseOrderId": "4d2e1027-bf80-4223-9f59-5f3a8d3322ae",
+                "quantity": 5,
+                "product_id": "48b82aa0-a774-4d4c-ae42-af52483dee4b"
+            }
+        ]
+}`
+}
+                </SyntaxHighlighter>
                 <p>The attribute sales is an array objects with the sales that forbid that the product be deleted.</p>
 
                 <h5>Errors</h5>
@@ -1425,9 +1473,13 @@ const Endpoints = () => {
                 </table>
 
                 <h5>Returned</h5>
-                <code>{`{
-                    "message": "Product deleted",
-                }`}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "message": "Product deleted",
+}
+`}
+                </SyntaxHighlighter>
 
                 <h5>Errors</h5>
                 <table>
@@ -1448,7 +1500,7 @@ const Endpoints = () => {
 
             {/*----------------- DELETED PRODDUCTS --------------------*/}
             <React.Fragment>
-                <h3>Authentication</h3>
+                <h3 className='title'>Authentication</h3>
 
                 <h4><span className="post">POST</span> - /login</h4>
 
@@ -1472,17 +1524,21 @@ const Endpoints = () => {
                 </table>
 
                 <h5>Returned</h5>
-                <code>{`{
-                    "user": {
-                        "id": "7dd1277f-a138-4071-932e-563fd290b7d5",
-                        "email": "cristina@gmail.com",
-                        "name": "Miranda",
-                        "lastName": "Figarella",
-                        "role": "admin",
-                        "createdAt": "2022-06-07T23:19:44.840Z"
-                    },
-                    "token": "eyJhbGciOiJIUzI1NiIsInR50CI6IkpXVCJ9.eyJzdWIiOiI3ZGQxMjc3Zi1hMTM4LTQwNzEtOTMyZS01NjNmZDI5MGI3ZDUiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTU3MDAwMDR9.2motxohp2FONyLEOOH14_xyX3d98fYr71i4RdVRPoxE"
-                }`}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "user": {
+        "id": "7dd1277f-a138-4071-932e-563fd290b7d5",
+        "email": "cristina@gmail.com",
+        "name": "Miranda",
+        "lastName": "Figarella",
+        "role": "admin",
+        "createdAt": "2022-06-07T23:19:44.840Z"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR50CI6IkpXVCJ9.eyJzdWIiOiI3ZGQxMjc3Zi1hMTM4LTQwNzEtOTMyZS01NjNmZDI5MGI3ZDUiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTU3MDAwMDR9.2motxohp2FONyLEOOH14_xyX3d98fYr71i4RdVRPoxE"
+}
+`}
+                </SyntaxHighlighter>
 
                 <h5>Errors</h5>
                 <table>
@@ -1518,9 +1574,13 @@ const Endpoints = () => {
                 </table>
 
                 <h5>Returned</h5>
-                <code>{`{
-                    "message": "Email sent",
-                }`}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "message": "Email sent",
+}
+`}
+                </SyntaxHighlighter>
 
                 <h5>Errors</h5>
                 <table>
@@ -1571,9 +1631,13 @@ const Endpoints = () => {
                 </table>
 
                 <h5>Returned</h5>
-                <code>{`{
-                    "message": "Password changed",
-                }`}</code>
+                <SyntaxHighlighter language="json" style={solarizedDark} customStyle={highlightStyle}>
+{`
+{
+    "message": "Password changed"
+}
+`}
+                </SyntaxHighlighter>
 
                 <h5>Errors</h5>
                 <table>
@@ -1593,7 +1657,7 @@ const Endpoints = () => {
                     </tr>
                 </table>
             </React.Fragment>
-        </div>
+        </React.Fragment>
     )
 }
 

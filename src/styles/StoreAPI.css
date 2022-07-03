@@ -1,16 +1,122 @@
 .store-api__container {
     display: grid;
-    grid-template-columns: 220px auto;
-    grid-template-rows: 70px auto;
+    grid-template-columns: 220px calc(100% - 220px);
+    grid-template-rows: 100px auto;
 }
 .store-api__title {
     grid-column: 1/3;
     grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+}
+.store-api__title h1 {
+    margin-left: 20px;
 }
 .store-api__sidebar {
     grid-column: 1/2;
     grid-row: 2/3;
 }
+.store-api__sidebar ul {
+    justify-content: center;
+    list-style: none;
+    position: fixed;
+    width: 220px;
+}
+.store-api__sidebar li {
+    width: 50%;
+    padding: 5px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 0px 0px 8px var(--neon);
+    cursor: pointer;
+}
+.store-api__container li:active {
+    box-shadow: 0px 0px 12px var(--neon);
+}
 .store-api__content {
     grid-column: 2/3;
+    min-height: 500px;
+}
+.content__text {
+    width: 85%;
+    box-shadow: -5px 5px 5px var(--neon);
+    background: #050d18;
+    overflow-y: hidden;
+    padding: 0 30px;
+}
+
+.content__text > * {
+    margin: 30px 0;
+    position: relative;
+}
+
+.content__text h2 {
+    font-size: 1.8rem;
+}
+.content__text h3 {
+    font-size: 1.6rem;
+    margin: 40px 0;
+    text-align: center
+}
+.content__text h4 {
+    font-size: 1.4rem;
+    margin: 40px 0;
+    /*margin-left: 40px;*/
+}
+.content__text h5 {
+    font-size: 1.2rem;
+    margin-left: 60px;
+}
+.content__text ul {
+    margin-left: 100px;
+}
+.content__text p, .content__text table, .content__text code{
+    margin-left: 60px;
+}
+.content__text table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 60%;
+}
+.content__text td, .content__text th {
+    background: #0a1628;
+    padding: 10px 20px;
+    border-collapse: collapse;
+}
+
+span.post, span.delete, span.get, span.delete, span.patch {
+    background-color: var(--box);
+    padding: 4px 8px;
+    border-radius: 20%;
+}
+span.patch {
+    color: #d308d3;
+}
+span.post {
+    color: #43a922;
+}
+span.get{
+    color: var(--neon);
+}
+span.delete {
+    color: #ff0f52;
+}
+.content__text th {
+    background-color: var(--box);
+    text-transform: capitalize;
+}
+
+@keyframes contract {
+    0% { box-shadow: none; }
+    2% { box-shadow: -5px 5px 5px var(--neon); }
+    4% { box-shadow: none; }
+    6% { box-shadow: -5px 5px 5px var(--neon); }
+    7% { height: initial; }
+    80% { height: 2px; }
+    82% { box-shadow: -5px 5px 5px var(--neon); }
+    84% { box-shadow: none; }
+    86% { box-shadow: -5px 5px 5px var(--neon); }
+    88% { box-shadow: none; }
+    90% { box-shadow: -5px 5px 5px var(--neon); }
 }

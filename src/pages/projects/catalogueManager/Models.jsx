@@ -27,10 +27,12 @@ const Models = () => {
                 <tr>
                     <td><b>name</b></td>
                     <td>String</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>last_name</b></td>
                     <td>String</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>role</b></td>
@@ -40,6 +42,7 @@ const Models = () => {
                 <tr>
                     <td><b>created_at</b></td>
                     <td>Timestamp</td>
+                    <td></td>
                 </tr>
             </table>
 
@@ -65,22 +68,27 @@ const Models = () => {
                 <tr>
                     <td><b>price</b></td>
                     <td>Integer</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>name</b></td>
                     <td>String</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>description</b></td>
                     <td>Character Varying</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>stock</b></td>
                     <td>Integer</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>created_at</b></td>
                     <td>Timestamp</td>
+                    <td></td>
                 </tr>
             </table>
 
@@ -104,10 +112,12 @@ const Models = () => {
                 <tr>
                     <td><b>direction</b></td>
                     <td>Character Varying</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>ordered_at</b></td>
                     <td>Timestamp</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>finished_at</b></td>
@@ -141,10 +151,12 @@ const Models = () => {
                 <tr>
                     <td><b>price</b></td>
                     <td>Integer</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>quantity</b></td>
                     <td>Integer</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>product_id</b></td>
@@ -180,14 +192,17 @@ const Models = () => {
                 <tr>
                     <td><b>price</b></td>
                     <td>Integer</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>name</b></td>
                     <td>String</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>description</b></td>
                     <td>Character Varying</td>
+                    <td></td>
                 </tr>
             </table>
 
@@ -211,10 +226,12 @@ const Models = () => {
                 <tr>
                     <td><b>name</b></td>
                     <td>String</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>last_name</b></td>
                     <td>String</td>
+                    <td></td>
                 </tr>
             </table>
 
