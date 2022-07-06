@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../styles/AboutMe.css';
 
-import LightTextBox from '../containers/LightTextBox';
+import SimpleTextBox from '../containers/SimpleTextBox';
 import Card from '../components/Card';
 
 import DatacampBright from '@icons/logo_datacamp_bright.png';
@@ -26,14 +26,14 @@ const AboutMe = () => {
         <div className="about-container">
             
             <h1 className='title'>Ab<span className='title__delay1'>o</span>ut M<span className='title__delay2'>e</span></h1>
-            <LightTextBox>
+            <SimpleTextBox>
                 <p>I’m a creator, I’m appasionate about creating, computational science and IA. For me is not enough with know how to do something, I need to know why we do it that way and not of another way. I like to figure out new forms and ways, I like to innovate.</p>
-            </LightTextBox>
+            </SimpleTextBox>
 
             <div className='conector'>
                 <h2 className='title'>Stu<span>d</span>ies</h2>
             </div>
-            <LightTextBox>
+            <SimpleTextBox>
                 <p>Principally I study informatic engineering, I’m in the second of four years.</p>
                 <h3>Aditional Studies</h3>
                 <div className="aditional-studies">
@@ -47,13 +47,13 @@ const AboutMe = () => {
                         <p>As hobby I study data science at Datacamp, I’ve learn data analysis,SQL and Python.</p>
                     </Card>
                 </div>
-            </LightTextBox>
+            </SimpleTextBox>
 
             <div className='conector'>
                 <h2 className='title'>S<span>ki</span>lls</h2>
             </div>
             <div className='skills__container'>
-                <LightTextBox> 
+                <SimpleTextBox> 
                     <h3>Languages</h3>
                     <p>My studies of programming are focused on being a very good backend developer, principally with Node JS.</p>
 
@@ -77,8 +77,8 @@ const AboutMe = () => {
                         </Card>
                     </div>
 
-                </LightTextBox>
-                <LightTextBox> 
+                </SimpleTextBox>
+                <SimpleTextBox> 
                     <h3>Framworks and Other Technologies</h3>
                     <p>Click a card to send you to a project that was made using the framework or library</p>
 
@@ -106,7 +106,7 @@ const AboutMe = () => {
                             <h4>JQuery</h4>
                         </Card>
                     </div>
-                    </LightTextBox>
+                    </SimpleTextBox>
             </div>
             
         </div>

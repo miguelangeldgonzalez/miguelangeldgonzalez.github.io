@@ -6,7 +6,9 @@ import '../styles/Header.css';
 const header = () => {
     return (
         <header className='header'>
-            <span className='header__main-icon'>MD</span>
+            <Link to='/'>
+                <span className='header__main-icon'>MD</span>
+            </Link>
 
             <nav className='header__nav'>
                 <Link className='header__nav-link' to="/projects">Projects</Link>
