@@ -1,30 +1,66 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import LightTextBox from '../containers/LightTextBox';
+import SimpleTextBox from '../containers/SimpleTextBox';
+
+import Logo from '../assets/img/logo_no_background.png';
 
 import '@styles/Home.css';
 
 const Home = () => {
-    const styles = {
-        width: 'calc(100% / 4)',
-        textAlign: 'center'
-    }
     return (
         <div className='home__container'>
-            <h1 className='title'>Welco<span className='title__delay1'>m</span>e to my kin<span className='title__delay2'>g</span>dom!</h1>
+            <div className="banner">
+                <div className="banner__text-container">
+                    <h1 className='title'>Miguel<span className='title__delay1'>an</span>gel Domi<span className='title__delay2'>n</span>guez</h1>
 
-            <h2>Tell me, what are you searching for?</h2>
+                    <h2>Web Developer</h2>
+                </div>
+                <div className="banner__image-container">
+                    <i></i>
+                    <i className="second"></i>
+                    <i className="third"></i>
+                    <i className="fourth"></i>
+                    <img src={Logo} alt="Logo Miguelángel Dominguez" />
+                </div>
+            </div>
 
-            <div className="navigation__container">
-                <LightTextBox styles={styles} to='/about'>
-                    <p>If you want to know <b>who am I</b> and what can I do,  click here.</p>
-                </LightTextBox>
-                <LightTextBox styles={styles} to='/projects'>
-                    <p>If you want to see <b>my projects</b>, <br /> click here.</p>
-                </LightTextBox>
-                <LightTextBox styles={styles} to='/contact'>
-                    <p>If you want to contact with me, click here (or just go to the footer).</p>
-                </LightTextBox>
+            <div className="navigation">
+                <h2>Tell me, what are you searching for?</h2>
+
+                <div className="navigation__sections">
+                    
+                    <div className='navigation__section'>
+                        <Link className='navigation__link' to='/projects'>
+                            <div className="connection"></div>
+                            <SimpleTextBox>
+                                <h3>Projects</h3>
+
+                                <p>A list of all the projects that I did.</p>
+                            </SimpleTextBox>
+                        </Link>
+                    </div>
+
+                    <div className='navigation__section'>
+                        <Link className='navigation__link' to='/about'>
+                            <div className="connection"></div>
+                            <SimpleTextBox>
+                                <h3>About Me</h3>
+
+                                <p>A sumary about me, my skills, certification, goals, etc.</p>
+                            </SimpleTextBox>
+                        </Link>
+                    </div>
+                    <div className='navigation__section'>
+                        <Link className='navigation__link' to='/contact'>
+                            <div className="connection"></div>
+                            <SimpleTextBox>
+                                <h3>Contact</h3>
+                                <p>All the ways with you can contact me.</p>
+                            </SimpleTextBox>
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -41,7 +41,7 @@
 .content__text {
     width: 85%;
     box-shadow: -5px 5px 5px var(--neon);
-    background: #050d18;
+    background: var(--accent);
     overflow-y: hidden;
     padding: 0 30px;
 }
@@ -62,7 +62,6 @@
 .content__text h4 {
     font-size: 1.4rem;
     margin: 40px 0;
-    /*margin-left: 40px;*/
 }
 .content__text h5 {
     font-size: 1.2rem;
@@ -80,11 +79,14 @@
     width: 60%;
 }
 .content__text td, .content__text th {
-    background: #0a1628;
+    background: var(--box);
     padding: 10px 20px;
     border-collapse: collapse;
 }
-
+.content__text th {
+    background-color: var(--background);
+    text-transform: capitalize;
+}
 span.post, span.delete, span.get, span.delete, span.patch {
     background-color: var(--box);
     padding: 4px 8px;
@@ -102,21 +104,11 @@ span.get{
 span.delete {
     color: #ff0f52;
 }
-.content__text th {
-    background-color: var(--box);
-    text-transform: capitalize;
-}
+
 
 @keyframes contract {
     0% { box-shadow: none; }
     2% { box-shadow: -5px 5px 5px var(--neon); }
     4% { box-shadow: none; }
     6% { box-shadow: -5px 5px 5px var(--neon); }
-    7% { height: initial; }
-    80% { height: 2px; }
-    82% { box-shadow: -5px 5px 5px var(--neon); }
-    84% { box-shadow: none; }
-    86% { box-shadow: -5px 5px 5px var(--neon); }
-    88% { box-shadow: none; }
-    90% { box-shadow: -5px 5px 5px var(--neon); }
 }

@@ -16,11 +16,19 @@ const Endpoints = () => {
 
     return (
         <React.Fragment>
-            {/*--------------------- USERS ----------------------*/}
-            <React.Fragment>
             <h2>Endpoints</h2>
 
+            <p>All the endpoints starts with <b>/api/v1</b>. For every section you have to add the the route of the section, for instance, for the section User the route is <b>/users</b>, so the complete route will be <b>/api/v1/users</b>.</p> 
+            
+            <p>Most endpoints works on the root changing the HTTP method, but if the endpoint need an aditional route will be specified on the endpoint title, for instance, to upload a profile image you must have tu use the route <b>/upload_profile_image</b> with the users route, so the complete route will be <b>/api/v1/users/upload_profile_image</b></p>
+
+            <p>The routes that need authentication will need that you pass a token using <b>Bearer Authentication</b>.</p>
+            {/*--------------------- USERS ----------------------*/}
+            <React.Fragment>
+
             <h3 className='title'>Users</h3>
+
+            <h3 style={{fontSize: '1.3rem'}}>/users</h3>
             <h4><span className='post'>POST</span> - Create User</h4>
 
             <h5>Authorization</h5>
@@ -341,6 +349,7 @@ const Endpoints = () => {
             {/*--------------------- PRODUCTS ----------------------*/}
             <React.Fragment>
             <h3 className='title'>Products</h3>
+            <h3 style={{fontSize: '1.3rem'}}>/products</h3>
 
             <h4><span className='post'>POST</span> - Create Product</h4>
 
@@ -703,7 +712,8 @@ const Endpoints = () => {
 
             {/*------------------- PURCHASE ORDER --------------------*/}
             <React.Fragment>
-            <h3 className='title'>Purchase Order</h3>
+            <h3 className='title'>Purchase Orders</h3>
+            <h3 style={{fontSize: '1.3rem'}}>/purchase_orders</h3>
 
             <h4><span className='get'>GET</span> - Get All Orders</h4>
 
@@ -1094,6 +1104,9 @@ const Endpoints = () => {
             {/*----------------------- SALES -------------------------*/}
             <React.Fragment>
                 <h3 className='title'>Sales</h3>
+                <h3 style={{fontSize: '1.3rem'}}>/sales</h3>
+
+
                 <p>All these endpoints need admin authorization.</p>
 
                 <h4><span className='get'>GET</span> - Get All Sales</h4>
@@ -1271,7 +1284,9 @@ const Endpoints = () => {
 
             {/*------------------- DELETED USERS --------------------*/}
             <React.Fragment>
-            <h3 className='title'>Sales</h3>
+                <h3 className='title'>Deleted Users</h3>
+                <h3 style={{fontSize: '1.3rem'}}>/deleted_users</h3>
+
                 <p>All these endpoints need admin authorization.</p>
 
                 <h4><span className='get'>GET</span> - Get All Sales</h4>
@@ -1383,6 +1398,8 @@ const Endpoints = () => {
             {/*----------------- DELETED PRODDUCTS --------------------*/}
             <React.Fragment>
                 <h3 className='title'>Deleted Products</h3>
+                <h3 style={{fontSize: '1.3rem'}}>/deleted_products</h3>
+
                 <p>All these endpoints need admin authorization.</p>
 
                 <h4><span className='get'>GET</span> - Get All Deleted Products</h4>
@@ -1498,9 +1515,10 @@ const Endpoints = () => {
                 </table>
             </React.Fragment>
 
-            {/*----------------- DELETED PRODDUCTS --------------------*/}
+            {/*----------------- Authentication --------------------*/}
             <React.Fragment>
                 <h3 className='title'>Authentication</h3>
+                <h3 style={{fontSize: '1.3rem'}}>/auth</h3>
 
                 <h4><span className="post">POST</span> - /login</h4>
 

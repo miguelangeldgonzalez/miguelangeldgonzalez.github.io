@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Endpoints from './catalogueManager/Endpoints';
-import Models from './catalogueManager/Models';
+import Basics from './storeAPI/Basics';
+import Endpoints from './storeAPI/Endpoints';
+import Models from './storeAPI/Models';
 
 import '@styles/StoreAPI.css';
 
 const StoreAPI = () => {
-    const [content, setContent] = React.useState(<Models />);
+    const [content, setContent] = React.useState(<Basics />);
     const [style, setStyle] = React.useState({});
 
     const changeContent = newContent => {
@@ -15,16 +16,18 @@ const StoreAPI = () => {
             animation: 'contract 5s 1'
         });
 
-        setTimeout(() => {
-            switch(newContent) {
-                case 'MODELS':
-                    setContent(<Models />);
-                    break;
-                case 'ENDPOINTS':
-                    setContent(<Endpoints />);
-                    break;
-            }
-        }, 1000);
+        switch(newContent) {
+            case 'BASICS': 
+                setContent(<Basics />);
+                break;
+            case 'MODELS':
+                setContent(<Models />);
+                break;
+            case 'ENDPOINTS':
+                setContent(<Endpoints />);
+                break;
+        }
+
         setTimeout(() => {
             setStyle({});
         }, 5000);
@@ -38,7 +41,7 @@ const StoreAPI = () => {
             </div>
             <sidebar className='store-api__sidebar'>
                 <ul>
-                   <li onClick={() => {changeContent('')}}><a>Basics</a></li> 
+                   <li onClick={() => {changeContent('BASICS')}}><a>Basics</a></li> 
                    <li onClick={() => {changeContent('MODELS')}}><a>Models</a></li>
                    <li onClick={() => {changeContent('ENDPOINTS')}}><a>Endpoints</a></li>
                 </ul>
