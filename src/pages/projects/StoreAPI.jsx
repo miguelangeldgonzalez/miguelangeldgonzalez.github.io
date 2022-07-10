@@ -37,7 +37,7 @@ const StoreAPI = () => {
     return (
         <div className='store-api__container'>
             <div className='store-api__title'>
-                <h1 className='title' id="title">Documentation Store API</h1>
+                <h1 className='title' id="title">Documentation <br className='br__store-api' />Store API</h1>
             </div>
             <sidebar className='store-api__sidebar'>
                 <ul>

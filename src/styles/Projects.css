@@ -9,3 +9,12 @@
     text-align: left;
     justify-content: center;
 }
+
+@media (max-width: 750px) {
+    .project-section__cards-container {
+        flex-flow: column;
+    }
+    .project-card {
+        margin: 40px auto;
+    }
+}

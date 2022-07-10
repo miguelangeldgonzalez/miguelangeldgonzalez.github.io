@@ -15,16 +15,15 @@ import Sequelize from '@icons/logo_sequelize_orm.png';
 import Postgre from '@icons/logo_postgres_sql.png';
 import Bootstrap from '@icons/logo_bootstrap.png';
 import WebpackLogo from '@icons/logo_webpack.png';
-import Express from '@icons/logo_express_js.png';
-import JQuery from '@icons/logo_jquery.png';
-import ReactLogo from '@icons/logo_react.png';
 import HTMLAndCSS from '@icons/logo_html_css.png';
+import Express from '@icons/logo_express_js.png';
+import ReactLogo from '@icons/logo_react.png';
+import JQuery from '@icons/logo_jquery.png';
 
 
 const AboutMe = () => {
     return (
         <div className="about-container">
-            
             <h1 className='title'>Ab<span className='title__delay1'>o</span>ut M<span className='title__delay2'>e</span></h1>
             <SimpleTextBox>
                 <p>I’m a creator, I’m appasionate about creating, computational science and IA. For me is not enough with know how to do something, I need to know why we do it that way and not of another way. I like to figure out new forms and ways, I like to innovate.</p>
@@ -37,12 +36,12 @@ const AboutMe = () => {
                 <p>Principally I study informatic engineering, I’m in the second of four years.</p>
                 <h3>Aditional Studies</h3>
                 <div className="aditional-studies">
-                    <Card img={PlatziBright}>
+                    <Card img={PlatziBright} a to='https://platzi.com/p/miguelangeldgonzalez/'>
                         <h3>Platzi</h3>
                         <p>To complement my engneering studies I do a lot of courses at Platzi in frontend, backend and marketing technologies.</p>
                     </Card>
 
-                    <Card img={DatacampBright}>
+                    <Card img={DatacampBright} a to='https://app.datacamp.com/profile/miguelangeldgonzalez'>
                         <h3>Datacamp</h3>
                         <p>As hobby I study data science at Datacamp, I’ve learn data analysis,SQL and Python.</p>
                     </Card>
@@ -84,31 +83,30 @@ const AboutMe = () => {
 
 
                     <div className='aditional-studies'>
-                        <Card mini={true} img={Sequelize}>
+                        <Card mini={true} img={Sequelize} to='/projects/store_api_rest'>
                             <h4>Sequelize ORM</h4>
                         </Card>
-			            <Card mini={true} img={Express}>
+			            <Card mini={true} img={Express} to='/projects/store_api_rest'>
                             <h4>Express</h4>
                         </Card>
-                        <Card mini={true} img={Postgre}>
+                        <Card mini={true} img={Postgre} to='/projects/store_api_rest'>
                             <h4>PostgreSQL</h4>
                         </Card>
-                        <Card mini={true} img={WebpackLogo}>
+                        <Card mini={true} img={WebpackLogo} to='/projects/portfolio'>
                             <h4>Webpack</h4>
                         </Card>
-			            <Card mini={true} img={ReactLogo}>
+			            <Card mini={true} img={ReactLogo} to='/projects/portfolio'>
 			                <h4>React JS</h4>
 			            </Card>
-                        <Card mini={true} img={Bootstrap}>
+                        <Card mini={true} img={Bootstrap} to='/projects/catalogue_and_sales_manager'>
                             <h4>Bootstrap</h4>
                         </Card>
-			            <Card mini={true} img={JQuery}>
+			            <Card mini={true} img={JQuery} to='/projects/catalogue_and_sales_manager'>
                             <h4>JQuery</h4>
                         </Card>
                     </div>
                     </SimpleTextBox>
             </div>
-            
         </div>
     )
 }

@@ -15,6 +15,10 @@ const Home = () => {
                     <h1 className='title'>Miguel<span className='title__delay1'>an</span>gel Domi<span className='title__delay2'>n</span>guez</h1>
 
                     <h2>Web Developer</h2>
+
+                    <SimpleTextBox>
+                        <p>I'm a JavaScript developer, my principal skills are Node JS and react JS. My goal is being a fullstacka JavaScript developer.</p>
+                    </SimpleTextBox>
                 </div>
                 <div className="banner__image-container">
                     <i></i>
@@ -39,6 +43,7 @@ const Home = () => {
                                 <p>A list of all the projects that I did.</p>
                             </SimpleTextBox>
                         </Link>
+                        <div className="cover"></div>
                     </div>
 
                     <div className='navigation__section'>
@@ -50,6 +55,7 @@ const Home = () => {
                                 <p>A sumary about me, my skills, certification, goals, etc.</p>
                             </SimpleTextBox>
                         </Link>
+                        <div className="cover"></div>
                     </div>
                     <div className='navigation__section'>
                         <Link className='navigation__link' to='/contact'>
@@ -59,6 +65,7 @@ const Home = () => {
                                 <p>All the ways with you can contact me.</p>
                             </SimpleTextBox>
                         </Link>
+                        <div className="cover"></div>
                     </div>
                 </div>
             </div>

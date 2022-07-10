@@ -4,8 +4,10 @@ import { HashRouter, Route, Routes} from 'react-router-dom';
 import Layout from '../containers/Layout';
 
 import CatalogueManager from '../pages/projects/CatalogueManager';
+import Portafolio from '../pages/projects/Portafolio';
 import StoreAPI from '../pages/projects/StoreAPI';
 import Projects from '../pages/Projects';
+import Contact from '../pages/Contact';
 import AboutMe from '../pages/AboutMe';
 import Home from '../pages/Home';
 
@@ -18,6 +20,8 @@ const App = () => {
                     <Route exact path="/projects" element={<Projects />} />
                     <Route exact path="/projects/catalogue_and_sales_manager" element={<CatalogueManager />} />
                     <Route exact path="/projects/store_api_rest/*" element={<StoreAPI />} />
+                    <Route exact path="/projects/portfolio" element={<Portafolio />} />
+                    <Route exact path="/contact" element={<Contact />} />
                     <Route exact path="/about" element={<AboutMe />} />
                 </Routes>
             </Layout>

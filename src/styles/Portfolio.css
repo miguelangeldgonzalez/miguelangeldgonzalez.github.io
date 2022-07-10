@@ -1,0 +1,17 @@
+.certifications__container {
+    display: flex;
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio__container {
+    text-align: center;
+}
+.portfolio__container .simple-textbox {
+    margin-top: 40px;
+}
+.portfolio__container .simple-card.mini {
+    width: 150px;
+    text-align: center;
+}

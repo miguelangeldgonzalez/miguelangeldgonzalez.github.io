@@ -13,3 +13,13 @@
     display: flex;
     flex-direction: row;
 }
+
+@media (max-width: 800px) {
+    .skills__container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .about-container .simple-textbox {
+        width: 70%;
+    }
+}
