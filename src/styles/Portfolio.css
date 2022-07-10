@@ -15,3 +15,9 @@
     width: 150px;
     text-align: center;
 }
+
+@media (max-width: 800px) {
+    .portfolio__container .simple-textbox {
+        width: 60%;
+    }
+}

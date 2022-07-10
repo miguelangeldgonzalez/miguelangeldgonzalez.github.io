@@ -13,8 +13,8 @@ const Projects = () => {
                     API to manage a store. Created with JWT for sessions, Express for endpoints and Sequelize ORM to manage any type of Data Base.
                 </ProjectCard>
                 
-                <ProjectCard title='Catalogue and Sales Manager' languages={['JS', 'PHP', 'BOOTSTRAP']} to='/projects/catalogue_and_sales_manager'>
-                Software created for ACM Investments, the softhware stores the catalogue of the real states that the company can sale and provide a sales record.
+                <ProjectCard title='Catalog and Sales Manager' languages={['JS', 'PHP', 'BOOTSTRAP']} to='/projects/catalog_and_sales_manager'>
+                Software created for ACM Investments, the software stores the catalog of the real states that the company can sale and provide a sales record.
                 </ProjectCard>
             </div>
         </div>

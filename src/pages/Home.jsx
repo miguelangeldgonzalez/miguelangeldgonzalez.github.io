@@ -17,7 +17,7 @@ const Home = () => {
                     <h2>Web Developer</h2>
 
                     <SimpleTextBox>
-                        <p>I'm a JavaScript developer, my principal skills are Node JS and react JS. My goal is being a fullstacka JavaScript developer.</p>
+                        <p>I'm a JavaScript developer, my principal skills are Node JS and react JS. My goal is being a full-stack JavaScript developer.</p>
                     </SimpleTextBox>
                 </div>
                 <div className="banner__image-container">
@@ -52,7 +52,7 @@ const Home = () => {
                             <SimpleTextBox>
                                 <h3>About Me</h3>
 
-                                <p>A sumary about me, my skills, certification, goals, etc.</p>
+                                <p>A summary about me, my skills, certification, goals, etc.</p>
                             </SimpleTextBox>
                         </Link>
                         <div className="cover"></div>

@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Model from '../../../assets/img/E_R_model.png';
+
 const Models = () => {
     return (
         <div>
             <h2>Models</h2>
-
+            <img src={Model} />
             <h3>Users</h3>
 
             <h4>Structure</h4>
@@ -12,7 +14,7 @@ const Models = () => {
                 <tr>
                     <th>Field</th>
                     <th>Type</th>
-                    <th>Aditional</th>
+                    <th>Additional</th>
                 </tr>
                 <tr>
                     <td><b>id</b></td>
@@ -47,9 +49,9 @@ const Models = () => {
             </table>
 
             <h4>Description</h4>
-            <p>Is only a table of users. The users are identified by the email.</p>
+            <p>Is jus a table of users. The users are identified by their email.</p>
 
-            <p>When you search a user in the endpoint, there will be a field called attributes called “image” that field doesn’t exist on the database.</p>
+            <p>When you search an user in the endpoint, there will be a field called “image”, that is the user's profile image, actually that field does not exist in the database.</p>
 
             <h3>Products</h3>
 
@@ -58,7 +60,7 @@ const Models = () => {
                 <tr>
                     <th>Field</th>
                     <th>Type</th>
-                    <th>Aditional</th>
+                    <th>Additional</th>
                 </tr>
                 <tr>
                     <td><b>id</b></td>
@@ -93,7 +95,7 @@ const Models = () => {
             </table>
 
             <h4>Description</h4>
-            <p>The products will be stored here. The products images don’t will be stored on the database; the images will be searched at the moment of the product will be searched.</p>
+            <p>The products will be stored here. The products images won't be stored on the database; the images will be searched at the moment of the product will be searched.</p>
 
             <h3>Purchase Orders</h3>
             
@@ -102,7 +104,7 @@ const Models = () => {
                 <tr>
                     <th>Field</th>
                     <th>Type</th>
-                    <th>Aditional</th>
+                    <th>Additional</th>
                 </tr>
                 <tr>
                     <td><b>id</b></td>
@@ -129,6 +131,11 @@ const Models = () => {
                     <td>UUID</td>
                     <td>Polymorphic association</td>
                 </tr>
+                <tr>
+                    <td><b>reference_number</b></td>
+                    <td>Number</td>
+                    <td></td>
+                </tr>
             </table>
 
             <h4>Description</h4>
@@ -141,7 +148,7 @@ const Models = () => {
                 <tr>
                     <th>Field</th>
                     <th>Type</th>
-                    <th>Aditional</th>
+                    <th>Additional</th>
                 </tr>
                 <tr>
                     <td><b>id</b></td>
@@ -168,10 +175,15 @@ const Models = () => {
                     <td>UUID</td>
                     <td>Foreign Key</td>
                 </tr>
+                <tr>
+                    <td><b>reference_number</b></td>
+                    <td>Number</td>
+                    <td></td>
+                </tr>
             </table>
 
             <h4>Description</h4>
-            <p>When a purchase order is finished all the order items, that belongs to that order will be deleted and stored in this table. The field “price” will save the price of the product at the moment of the order is finished; this is because the price can change on the table product.</p>
+            <p>When a purchase order is finished, all the order items, that belongs to that order will be deleted and stored in this table. The field “price” will save the price of the product at the moment of the order is finished; this is because the price can change on the table product.</p>
 
             <p>The field “product_id” have a polymorphic association with the tables products and deleted_products.</p>
 
@@ -182,7 +194,7 @@ const Models = () => {
                 <tr>
                     <th>Field</th>
                     <th>Type</th>
-                    <th>Aditional</th>
+                    <th>Additional</th>
                 </tr>
                 <tr>
                     <td><b>id</b></td>
@@ -216,7 +228,7 @@ const Models = () => {
                 <tr>
                     <th>Field</th>
                     <th>Type</th>
-                    <th>Aditional</th>
+                    <th>Additional</th>
                 </tr>
                 <tr>
                     <td><b>id</b></td>

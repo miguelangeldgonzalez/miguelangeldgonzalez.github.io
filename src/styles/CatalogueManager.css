@@ -1,9 +1,0 @@
-.catalogue-manager__container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-}
-.catalogue-manager__container .simple-textbox {
-    width: 70%;
-}

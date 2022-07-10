@@ -26,7 +26,7 @@ const AboutMe = () => {
         <div className="about-container">
             <h1 className='title'>Ab<span className='title__delay1'>o</span>ut M<span className='title__delay2'>e</span></h1>
             <SimpleTextBox>
-                <p>I’m a creator, I’m appasionate about creating, computational science and IA. For me is not enough with know how to do something, I need to know why we do it that way and not of another way. I like to figure out new forms and ways, I like to innovate.</p>
+                <p>I’m a creator, I’m passionate about creating, computational science and IA. For me, it is not enough with know how to do something, I need to know why we do it that way and not of another way. I like to figure out new forms and ways, I like to innovate.</p>
             </SimpleTextBox>
 
             <div className='conector'>
@@ -43,7 +43,7 @@ const AboutMe = () => {
 
                     <Card img={DatacampBright} a to='https://app.datacamp.com/profile/miguelangeldgonzalez'>
                         <h3>Datacamp</h3>
-                        <p>As hobby I study data science at Datacamp, I’ve learn data analysis,SQL and Python.</p>
+                        <p>As hobby, I study data science at Datacamp, I’ve learned data analysis, SQL and Python.</p>
                     </Card>
                 </div>
             </SimpleTextBox>
@@ -64,21 +64,21 @@ const AboutMe = () => {
                         </Card>
 			            <Card img={PythonBright}>
                             <h4>Python</h4>
-                            <p>As I said, I study data science like a hoby so I did several courses of python oriented to data manipulation.</p>
+                            <p>As I said, I study data science like a hobby, so I did several courses of python oriented to data manipulation.</p>
                         </Card>
                         <Card img={PHPBright}>
                             <h4>PHP</h4>
-                            <p>It was my first backend programming language and it was with that I created my first project.</p>
+                            <p>It was my first backend programming language, and it was with that I created my first project.</p>
                         </Card>
 			            <Card img={HTMLAndCSS}>
                             <h4>HTML and CSS</h4>
-                            <p>Obviusly for a good web developer I learned HTML and CSS in depth.</p>
+                            <p>Every good web developer should know HTML and CSS in depth.</p>
                         </Card>
                     </div>
 
                 </SimpleTextBox>
                 <SimpleTextBox> 
-                    <h3>Framworks and Other Technologies</h3>
+                    <h3>Frameworks and Other Technologies</h3>
                     <p>Click a card to send you to a project that was made using the framework or library</p>
 
 
@@ -98,10 +98,10 @@ const AboutMe = () => {
 			            <Card mini={true} img={ReactLogo} to='/projects/portfolio'>
 			                <h4>React JS</h4>
 			            </Card>
-                        <Card mini={true} img={Bootstrap} to='/projects/catalogue_and_sales_manager'>
+                        <Card mini={true} img={Bootstrap} to='/projects/catalog_and_sales_manager'>
                             <h4>Bootstrap</h4>
                         </Card>
-			            <Card mini={true} img={JQuery} to='/projects/catalogue_and_sales_manager'>
+			            <Card mini={true} img={JQuery} to='/projects/catalog_and_sales_manager'>
                             <h4>JQuery</h4>
                         </Card>
                     </div>
