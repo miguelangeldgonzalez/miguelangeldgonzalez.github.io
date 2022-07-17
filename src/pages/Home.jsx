@@ -17,7 +17,7 @@ const Home = () => {
                     <h2>Web Developer</h2>
 
                     <SimpleTextBox>
-                        <p>I'm a JavaScript developer, my principal skills are Node JS and react JS. My goal is being a full-stack JavaScript developer.</p>
+                        <p>I'm a JavaScript developer, my principal skills are Node JS and React JS. My goal is being a full-stack JavaScript developer.</p>
                     </SimpleTextBox>
                 </div>
                 <div className="banner__image-container">
