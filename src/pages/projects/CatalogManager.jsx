@@ -47,7 +47,7 @@ const CatalogueManager = () => {
         <div className='catalogue-manager__container'>
             <h1 className='title'>Catalog and Sales Manager</h1>
             <ul>
-                <li><a href="https://github.com/miguelangeldgonzalez/Catalog_and_Sales_Manager">Repository</a></li>
+                <li><a href="https://github.com/miguelangeldgonzalez/Catalog_and_Sales_Manager" target='_blank'>Repository</a></li>
             </ul>
             <SimpleTextBox>
                 <h2>About the Company</h2>

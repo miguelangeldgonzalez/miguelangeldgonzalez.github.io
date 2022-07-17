@@ -11,7 +11,7 @@ const CaracasCake = () => {
         <div className='caracas-cake__container'>
             <h1 className='title'>Caracas Cake Web Site</h1>
             <ul>
-                <li><a href="https://github.com/miguelangeldgonzalez/CaracasCake">Repository</a></li>
+                <li><a href="https://github.com/miguelangeldgonzalez/CaracasCake" target='_blank'>Repository</a></li>
             </ul>
             <SimpleTextBox>
                 <h2>About the Company</h2>

@@ -44,7 +44,7 @@ const StoreAPI = () => {
                    <li onClick={() => {changeContent('BASICS')}}><a>Basics</a></li> 
                    <li onClick={() => {changeContent('MODELS')}}><a>Models</a></li>
                    <li onClick={() => {changeContent('ENDPOINTS')}}><a>Endpoints</a></li>
-                   <li><a href='https://github.com/miguelangeldgonzalez/Store_Backend_API_REST'>Repository</a></li>
+                   <li><a href='https://github.com/miguelangeldgonzalez/Store_Backend_API_REST' target='_blank'>Repository</a></li>
                 </ul>
             </sidebar>
             <article className='store-api__content'>

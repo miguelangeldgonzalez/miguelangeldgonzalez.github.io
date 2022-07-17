@@ -9,13 +9,13 @@ import '../styles/Footer.css'
 const Footer = () => {
     return (
         <footer>
-            <a href="https://github.com/miguelangeldgonzalez" className='footer__icon'>
+            <a href="https://github.com/miguelangeldgonzalez" target='_blank' className='footer__icon'>
                 <img src={Github} />
             </a>
-            <a href="https://www.linkedin.com/in/miguelangel-dom%C3%ADnguez-2183a1203/" className='footer__icon'>
+            <a href="https://www.linkedin.com/in/miguelangel-dom%C3%ADnguez-2183a1203/" target='_blank' className='footer__icon'>
                 <img src={Linkedin} />
             </a>
-            <a href="https://www.instagram.com/miguelangeldgonzalez/" className='footer__icon'>
+            <a href="https://www.instagram.com/miguelangeldgonzalez/" target='_blank' className='footer__icon'>
                 <img src={Instagram} />
             </a>
         </footer>

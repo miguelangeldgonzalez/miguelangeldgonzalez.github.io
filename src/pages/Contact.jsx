@@ -14,13 +14,13 @@ const Contact = () => {
             <h1 className='title'>Contact</h1>
 
             <div className="contact__icons">
-                <Card mini img={InstagramBright} to='https://www.instagram.com/miguelangeldgonzalez/' a target='blank'>
+                <Card mini img={InstagramBright} to='https://www.instagram.com/miguelangeldgonzalez/' a target='_blank'>
                     <p>Instagram</p>
                 </Card>
-                <Card mini img={EmailBright} to='mailto:miguelangel.dgonzalez@gmail.com' a target='blank'>
+                <Card mini img={EmailBright} to='mailto:miguelangel.dgonzalez@gmail.com' a target='_blank'>
                     <p>miguelangel.dgonzalez@gmail.com</p>
                 </Card>
-                <Card mini img={LinkedinBright} to='https://www.linkedin.com/in/miguelangel-dom%C3%ADnguez-2183a1203/' a target='blank'>
+                <Card mini img={LinkedinBright} to='https://www.linkedin.com/in/miguelangel-dom%C3%ADnguez-2183a1203/' a target='_blank'>
                     <p>LinkedIn</p>
                 </Card>
             </div>
