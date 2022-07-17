@@ -92,10 +92,10 @@ const AboutMe = () => {
                         <Card mini={true} img={Postgre} to='/projects/store_api_rest'>
                             <h4>PostgreSQL</h4>
                         </Card>
-                        <Card mini={true} img={WebpackLogo} to='/projects/portfolio'>
+                        <Card mini={true} img={WebpackLogo} to='/projects/caracas_cakes_web_site'>
                             <h4>Webpack</h4>
                         </Card>
-			            <Card mini={true} img={ReactLogo} to='/projects/portfolio'>
+			            <Card mini={true} img={ReactLogo} to='/projects/caracas_cakes_web_site'>
 			                <h4>React JS</h4>
 			            </Card>
                         <Card mini={true} img={Bootstrap} to='/projects/catalog_and_sales_manager'>

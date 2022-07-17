@@ -1,0 +1,37 @@
+.caracas-cake__container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.caracas-cake__container .simple-textbox {
+    width: 70%;
+}
+.caracas-cake__container ul {
+    list-style: none;
+}
+.caracas-cake__container li {
+    margin: 0 auto;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 0px 0px 8px var(--neon);
+    cursor: pointer;
+}
+.caracas-cake__container > .simple-textbox:nth-child(6) {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+.caracas-cake__demo {
+    width: 70%;
+    transition: .5s;
+}
+.caracas-cake__demo img {
+    width: 100%;
+}
+.caracas-cake__demo:hover {
+    box-shadow: 0px 0px 8px var(--neon);
+    transform: scale(1.1);
+}

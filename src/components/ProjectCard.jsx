@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Postgres from '@icons/logo_postgres_sql.png';
+import WebpackLogo from '@icons/logo_webpack.png';
 import Bootstrap from '@icons/logo_bootstrap.png';
 import Express from '@icons/logo_express_js.png';
 import NodeJS from '@icons/logo_node_js.png';
+import ReactJS from '@icons/logo_react.png';
 import PHP from '@icons/logo_php.png';
 import JS from '@icons/logo_js.png';
 
@@ -40,6 +42,12 @@ const ProjectCard = (props) => {
                                 break;
                             case 'JS':
                                 img = JS;
+                                break;
+                            case 'REACT':
+                                img = ReactJS;
+                                break;
+                            case 'WEBPACK':
+                                img = WebpackLogo;
                                 break;
                         }
                         return (

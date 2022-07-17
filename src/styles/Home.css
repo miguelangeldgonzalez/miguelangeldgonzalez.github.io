@@ -143,23 +143,29 @@
     transition: .5s;
     border-top-color: gray;
     border-bottom-color: gray;
+    position: relative;
+    z-index: 10;
 }
 .navigation__section .cover {
     position: relative;
-    width: calc(65% - 60px);
+    width: calc(76% - 60px);
 }
 .navigation__section .connection {
     height: 1px;
     background: gray;
     cursor: default;
-    width: calc(199% - 60px);
+    width: calc(220% - 60px);
     align-self: center;
     position: relative;
     left: 100%;
     top: 50%;
 }
 .navigation__sections > .navigation__section:nth-child(even) .connection {
-    left: -186%;
+    left: -195%;
+}
+.navigation__sections > .navigation__section:nth-child(even) .cover {
+    width: calc(73% - 60px);
+    position: relative;
 }
 .navigation__section .connection::before {
     position: absolute;

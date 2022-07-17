@@ -9,6 +9,9 @@ const Projects = () => {
         <div className="projects">
             <h1 className='title'>M<span className='title__delay1'>y</span> Proje<span className='title__delay2'>ct</span>s</h1>
             <div className='project-section__cards-container'>
+                <ProjectCard title="Caracas Cake's Web Site" languages={['REACT', 'WEBPACK']} to='/projects/caracas_cakes_web_site'>
+                    Web site to a start up from Caracas called Caracas Cake, this project was done with a designer, who designed all the UI interface and I coded the site.
+                </ProjectCard>
                 <ProjectCard title='Store API REST' languages={['EXPRESS', 'POSTGRES', 'NODE']} to='/projects/store_api_rest'>
                     API to manage a store. Created with JWT for sessions, Express for endpoints and Sequelize ORM to manage any type of Data Base.
                 </ProjectCard>
