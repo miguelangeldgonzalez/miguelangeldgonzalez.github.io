@@ -33,7 +33,7 @@ const AboutMe = () => {
                 <h2 className='title'>Stu<span>d</span>ies</h2>
             </div>
             <SimpleTextBox>
-                <p>Principally I study informatic engineering, I’m in the second of four years.</p>
+                <p>Principally I study informatic engineering, I'm about to end the carrear.</p>
                 <h3>Aditional Studies</h3>
                 <div className="aditional-studies">
                     <Card img={PlatziBright} a to='https://platzi.com/p/miguelangeldgonzalez/'>

@@ -26,16 +26,7 @@
 }
 @font-face {
     font-family: 'Roboto';
-    @font-face {
-        font-family: 'Roboto';
-        src: url('../assets/fonts/roboto/Roboto-Light.ttf');
-        font-weight: lighter;
-    }
-    @font-face {
-        font-family: 'Roboto';
-        src: url('../assets/fonts/roboto/Roboto-Medium.ttf');
-        font-weight: normal;  
-    }
+    src: url('../assets/fonts/roboto/Roboto-Light.ttf');
 }
 @keyframes flicker {
     0% {opacity: 0;}
